@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>حاسبة تكلفة تأثيث المنزل</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="page" id="page1">
+        <h2>أدخل معلوماتك لبدء الحساب</h2>
+        <form id="userInfoForm">
+            <label>الاسم الكامل: <input type="text" name="fullName" required></label><br>
+            <label>البريد الإلكتروني: <input type="email" name="email" required></label><br>
+            <label>الجنسية: <input type="text" name="nationality" required></label><br>
+            <label>هل تملك عقاراً في تركيا؟
+                <select name="ownsProperty" id="ownsProperty">
+                    <option value="نعم">نعم</option>
+                    <option value="لا">لا</option>
+                </select>
+            </label><br>
+            <label id="cityField" style="display:none;">في أي مدينة؟ <input type="text" name="city"></label><br>
+            <button type="submit">أكمل لحساب الميزانية</button>
+        </form>
+    </div>
+    <div class="page" id="page2" style="display:none;">
+        <h2>حاسبة تكلفة تأثيث منزل في إزميت</h2>
+        <form id="calculatorForm">
+            <p>هذا مكان الحاسبة التفاعلية التي تشمل كافة الأقسام من 1 إلى 6، وستتم إضافتها برمجياً لاحقًا.</p>
+            <div class="note">
+                ملاحظة: الأسعار تعتمد على جودة المواد وتفاصيل التنفيذ، ويتم التأكيد بعد المعاينة والمخططات.
+            </div>
+            <a href="https://wa.me/905555555555" class="cta-button" target="_blank">احجز موعد محادثة معي الآن</a>
+        </form>
+    </div>
+</body>
+</html>
