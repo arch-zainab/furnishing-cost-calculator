@@ -11,26 +11,81 @@
     <div class="page" id="page1">
         <h2>أدخل معلوماتك لبدء الحساب</h2>
         <form id="userInfoForm">
-            <label>الاسم الكامل: <input type="text" name="fullName" required></label><br>
-            <label>البريد الإلكتروني: <input type="email" name="email" required></label><br>
-            <label>الجنسية: <input type="text" name="nationality" required></label><br>
+            <label>الاسم الكامل: <input type="text" name="fullName" required></label>
+            <label>البريد الإلكتروني: <input type="email" name="email" required></label>
+            <label>الجنسية: <input type="text" name="nationality" required></label>
             <label>هل تملك عقاراً في تركيا؟
                 <select name="ownsProperty" id="ownsProperty">
                     <option value="نعم">نعم</option>
                     <option value="لا">لا</option>
                 </select>
-            </label><br>
-            <label id="cityField" style="display:none;">في أي مدينة؟ <input type="text" name="city"></label><br>
+            </label>
+            <label id="cityField" style="display:none;">في أي مدينة؟ <input type="text" name="city"></label>
             <button type="submit">أكمل لحساب الميزانية</button>
         </form>
     </div>
+
     <div class="page" id="page2" style="display:none;">
-        <h2>حاسبة تكلفة تأثيث منزل في إزميت</h2>
+        <h2>حاسبة تكلفة تأثيث منزل في إزميت – تركيا</h2>
         <form id="calculatorForm">
-            <p>هذا مكان الحاسبة التفاعلية التي تشمل كافة الأقسام من 1 إلى 6، وستتم إضافتها برمجياً لاحقًا.</p>
-            <div class="note">
-                ملاحظة: الأسعار تعتمد على جودة المواد وتفاصيل التنفيذ، ويتم التأكيد بعد المعاينة والمخططات.
-            </div>
+            <fieldset>
+                <legend>🟤 القسم الأول: معلومات العقار</legend>
+                <label>مساحة الشقة بالمتر المربع: <input type="number" required></label>
+                <label>عدد غرف النوم: <input type="number" required></label>
+                <label>عدد الصالات: <input type="number" required></label>
+                <label>هل يوجد تراس أو حديقة؟
+                    <select>
+                        <option>نعم</option>
+                        <option>لا</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>🟤 القسم الثاني: مستوى التأثيث</legend>
+                <label><input type="radio" name="level" required> اقتصادي (100–130 $/م²)</label>
+                <label><input type="radio" name="level"> متوسط (150–180 $/م²)</label>
+                <label><input type="radio" name="level"> فندقي فاخر (250–350 $/م²)</label>
+            </fieldset>
+            <fieldset>
+                <legend>🟤 القسم الثالث: الأجهزة الكهربائية</legend>
+                <label>عدد مكيفات 12000 وحدة: <input type="number" required></label>
+                <label>عدد مكيفات 18000 وحدة: <input type="number" required></label>
+                <label>ثلاجة 450L: <select><option>بيكو</option><option>أرشليك</option></select></label>
+                <label>غسالة ملابس: <select><option>بيكو</option><option>أرشليك</option></select></label>
+                <label>فرن كهربائي مدمج: <select><option>بيكو</option><option>أرشليك</option></select></label>
+                <label>غسالة صحون: <select><option>بيكو</option><option>أرشليك</option></select></label>
+                <label>تلفاز (اختياري): <select><option>لا</option><option>نعم</option></select></label>
+            </fieldset>
+            <fieldset>
+                <legend>🟤 القسم الرابع: الإكسسوارات</legend>
+                <label>هل ترغب بتوفير الستائر؟
+                    <select><option>نعم</option><option>لا</option></select>
+                </label>
+                <label>هل ترغب بتوفير السجاد؟
+                    <select><option>نعم</option><option>لا</option></select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>🟤 القسم الخامس: أعمال النجارة</legend>
+                <label>هل هناك أعمال نجارة؟ <select><option>نعم</option><option>لا</option></select></label>
+                <label>في أي غرفة؟ <input type="text"></label>
+                <label>نوع العمل: <input type="text"></label>
+                <label>المساحة بالمتر المربع: <input type="number"></label>
+                <label>نوع الخشب:
+                    <select>
+                        <option>MDF مطلي</option>
+                        <option>خشب طبيعي</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>🟤 القسم السادس: أعمال إضافية</legend>
+                <label>هل هناك تعديلات إنشائية؟ <select><option>نعم</option><option>لا</option></select></label>
+                <label>هل يشمل طلاء كامل للمنزل؟ <select><option>نعم</option><option>لا</option></select></label>
+                <label>هل ترغب بخدمة تنظيف نهائي؟ <select><option>نعم</option><option>لا</option></select></label>
+            </fieldset>
+
+            <div class="note">ملاحظة: الأسعار تعتمد على جودة المواد وتفاصيل التنفيذ، ويتم التأكيد بعد المعاينة والمخططات.</div>
             <a href="https://wa.me/905555555555" class="cta-button" target="_blank">احجز موعد محادثة معي الآن</a>
         </form>
     </div>
